@@ -96,7 +96,7 @@ body{
     display: flex;
     object-fit: cover;
     align-items: center;
-    background: url(../images/doctorbackground.jpg) no-repeat;
+    background: url(./images/doctorbackground.jpg) no-repeat;
     background-size: cover;
     background-position:center;
 }
