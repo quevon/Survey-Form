@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+:root{  
+    --lightblue:rgb(30,144,255);
+    --black:#13131a;
+    --bg:linear-gradient(135deg, #000000, #2d3436);
+    --border:.1rem solid rgb(30,144,255);
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--bg);
+    border-radius: 5rem;
+}
+section{
+    padding: 2rem 7%;
+}
+body{
+    background: var(--bg);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+.header.sticky{
+    padding: 1.5rem 7%;
+    background: linear-gradient(135deg, #000000, #2d3436);
+    border-bottom: var(--border);
+}
+.header .logo{
+    display: flex;
+}
+.header .logo img{
+    height: 6rem;
+    border-radius: 50%;
+    border: 2px solid rgb(30,144,255);
+}
+.header .logo h3{
+    font-size: 3rem;
+    color: #fff;
+
+}
+.header .logo span{
+    color: var(--lightblue);
+}
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+
+
+}
+.header .navbar a:hover{
+    color:var(--lightblue);
+    padding-bottom: .5rem;
+
+}
+.header .icons div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+.header .icons div:hover{
+    color:var(--lightblue);
+}
+#menu-btn{
+    display: none;
+}
+.home{
+    min-height: 100vh;
+    display: flex;
+    object-fit: cover;
+    align-items: center;
+    background: url(../images/doctorbackground.jpg) no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+.home .content{
+    margin-top: 80px;
+    max-width: 60rem;
+
+}
+.home .content h3{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #000;
+
+}
+.home .content p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #000 ;
+    text-align: justify;
+}
+.heading{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom:3.5rem;
+    font-size: 4rem;
+}
+.heading span{
+    color: #fff;
+    text-transform: uppercase;
+    color: linear-gradient(135deg, #09c6f9, #045de9);
+}
+.survey-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.survey-form .container{
+    max-width:700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px var(--lightblue);
+}
+
+.survey-form .container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.survey-form .container .title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 50px;
+    border-radius: 5px;
+    background: rgb(30,144,255);
+}
+.survey-form .container .title span{
+    color: var(--lightblue);
+}
+
+.survey-form .container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box .details,
+.user-details .input-box label{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input,
+.user-details .input-box select{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width:2px ;
+    transition: all 0.3s ease;
+    
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid,
+.user-details .input-box select:focus,
+.user-details .input-box select:valid,
+.question-1-details .input-box input:focus,
+.question-1-details .input-box input:valid{
+    border-color: rgb(30,144,255);
+}
+
+form .gender-details .gender-title,
+form .question-1-details .input-box .details,
+form .question-details .question-title{
+    font-size:20px;
+    font-weight: 500; 
+}
+form .gender-details .category,
+form .question-details .category{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+.gender-details .category label,
+.question-details .category label{
+    display: flex;
+    align-items: center;
+}
+.gender-details .category .gender,
+.question-details .category .question,
+.question-details .category .question-1,
+.question-details .category .question-2,
+.question-details .category .question-3,
+.question-details .category .question-4,
+.question-details .category .question-5,
+.question-details .category .question-6,
+.question-details .category .question-7,
+.question-details .category .question-8{
+    font-size: 1.5rem;
+}
+.gender-details .category .dot,
+.question-details .category .dot{
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border:5px solid transparent;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three,
+#dot-4:checked ~ .category label .four,
+#dot-5:checked ~ .category label .five,
+#dot-6:checked ~ .category label .six,
+#dot-7:checked ~ .category label .seven,
+#dot-8:checked ~ .category label .eight,
+#dot-9:checked ~ .category label .nine,
+#dot-10:checked ~ .category label .ten,
+#dot-11:checked ~ .category label .eleven,
+#dot-12:checked ~ .category label .twelve,
+#dot-13:checked ~ .category label .thirteen,
+#dot-14:checked ~ .category label .fourteen,
+#dot-15:checked ~ .category label .fifteen,
+#dot-16:checked ~ .category label .sixteen,
+#dot-17:checked ~ .category label .seventeen,
+#dot-18:checked ~ .category label .eighteen,
+#dot-19:checked ~ .category label .nineteen,
+#dot-20:checked ~ .category label .twenty,
+#dot-21:checked ~ .category label .twenty-one,
+#dot-22:checked ~ .category label .twenty-two,
+#dot-23:checked ~ .category label .twenty-three,
+#dot-24:checked ~ .category label .twenty-four,
+#dot-25:checked ~ .category label .twenty-five,
+#dot-26:checked ~ .category label .twenty-six,
+#dot-27:checked ~ .category label .twenty-seven,
+#dot-28:checked ~ .category label .twenty-eight,
+#dot-29:checked ~ .category label .twenty-nine,
+#dot-30:checked ~ .category label .thirty,
+#dot-31:checked ~ .category label .thirty-one,
+#dot-32:checked ~ .category label .thirty-two{
+    
+    background: rgb(30,144,255);
+    border-color: #d9d9d9;
+}
+.question-1-details .input-box .details{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+.question-1-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width:2px ;
+    transition: all 0.3s ease;
+    
+}
+form input[type="radio"]{
+    display: none;
+}
+
+form .button{
+  height: 45px;
+  margin: 35px 0;
+}
+form .button input{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgb(30,144,255);
+}
+form .button input:hover{
+    border: 2px solid #000000;
+}
+.footer{
+    background: linear-gradient(135deg, #000000, #2d3436);
+    text-align: center;
+}
+.footer .share{
+    padding: 1rem 0;
+}
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: rgb(30,144,255);
+    margin: .3rem;
+    border-radius: 50%;
+}
+.footer .share a:hover{
+    background-color:rgb(30,144,255);
+}
+
+.footer .credit{
+    font-size: 2rem;
+    color:#fff;
+    font-weight: lighter;
+    padding: 1.5rem;
+
+}
+.footer .credit span{
+    color: rgb(30,144,255);
+}
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding:1.5rem 2rem;
+        transition: all 0.3s ease;
+        
+    }
+    .header.sticky{
+        padding: 1.5rem 7%;
+        background: linear-gradient(135deg, #000000, #2d3436);
+        border-bottom: 2px solid #666;
+    }
+    section{
+        padding: 2rem ;
+    }
+}
+@media (max-width:768px){
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 100%; right: -100%;
+        background: linear-gradient(135deg, #000000, #2d3436);
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+    .header .navbar.active{
+        right: 0;
+    }
+    
+    .header .navbar a{
+        color: #fff;
+        display: block;
+        margin:1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+
+
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+    .home .content p{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width: 584px){
+    html{
+        font-size: 50%;
+    }
+    
+    .survey-form .container{
+        max-width:100%;
+        margin: 20px;
+    }
+    form .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    form .gender-details .category{
+        width: 100%;
+    }
+    .survey form .container form .user-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+}
+@media (max-width:450x){
+   
+
+}
+

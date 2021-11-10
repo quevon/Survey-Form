@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    font-size: 62.5%;
+
+}
+section{
+    padding: 2rem 7%;
+}
+
+.header{
+    display: flex;
+    padding: 1.5rem 7%;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.header .logo{
+    display: flex;
+}
+.header .logo img{
+    height: 6rem;
+    border-radius: 50%;
+    border: 2px solid rgb(30,144,255);
+}
+.header .logo h3{
+    font-size: 3rem;
+    color: #fff;
+
+}
+.header .logo span{
+    color: var(--lightblue);
+}
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    object-fit: cover;
+    align-items: center;
+    background: url(../images/doctorbackground.jpg) no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+.home .content{
+    margin-top: 80px;
+    max-width: 60rem;
+
+}
+.home .content h3{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #000;
+
+}
+.home .content .btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    background: rgb(30,144,255);
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000;
+}
+.home .content .btn:hover{
+    border: 1px solid #000;
+}
+
+
+.heading{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom:3.5rem;
+    font-size: 4rem;
+}
+.heading span{
+    color: #fff;
+    text-transform: uppercase;
+    color: linear-gradient(135deg, #09c6f9, #045de9);
+}
